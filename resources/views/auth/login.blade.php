@@ -57,10 +57,6 @@
                                     {{ __('Login') }}
                                 </button>
 
-                                <!-- TAMBAHKAN LINE INI -->
-                                <a href="{{ route('login.provider', 'google') }}" class="btn btn-danger">{{ __('Google Sign in') }}</a>
-                                <!-- TAMBAHKAN LINE INI -->
-
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
@@ -69,7 +65,6 @@
                             </div>
                         </div>
                     </form>
-                    <br><center><p>Repost by <a href='https://stokcoding.com/' title='StokCoding.com' target='_blank'>StokCoding.com</a></p></center>
                     
                 </div>
             </div>

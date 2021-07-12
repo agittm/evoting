@@ -30,6 +30,6 @@ class ChoiceController extends Controller
         $user->candidate_id = $request->get('candidate_id');
         $user->status = "SUDAH";
         $user->save();
-        return redirect()->route('candidates.pilihan')->with('status', 'You Have Been Choiched');
+        return redirect()->route('candidates.pilihan')->with('status', 'Berhasil memilih kandidat');
     }
 }

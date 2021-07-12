@@ -8,7 +8,7 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-md-6">
-                                <h3 class="card-title">Perolehan Suara | Repost by <a href='https://stokcoding.com/' title='StokCoding.com' target='_blank'>StokCoding.com</a>
+                                <h3 class="card-title">Perolehan Suara</a>
                                 </h3>
                             </div>
                         </div>

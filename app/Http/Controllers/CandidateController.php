@@ -66,7 +66,7 @@ class CandidateController extends Controller
         }
 
         $new_candidate->save();
-        return redirect()->route('candidates.create')->with('status', 'candidate successfully Created');
+        return redirect()->route('candidates.create')->with('status', 'Berhasil menambah kandidat');
     }
 
     /**
@@ -126,7 +126,7 @@ class CandidateController extends Controller
         }
 
         $candidate->save();
-        return redirect()->route('candidates.index')->with('status', 'Candidate Sucessfully Updated');
+        return redirect()->route('candidates.index')->with('status', 'Berhasil mengubah data kandidat');
     }
 
     /**
@@ -142,6 +142,6 @@ class CandidateController extends Controller
         if($candidate->photo_paslon && file_exists(storage_path('app/public/'.$candidate->photo_paslon))){
             \Storage::delete('public/'.$candidate->photo_paslon);
         }
-        return redirect()->route('candidates.index')->with('status', 'candidate successfully Deleted');
+        return redirect()->route('candidates.index')->with('status', 'Berhasil menghapus kandidat');
     }
 }
