@@ -15,7 +15,7 @@
                             </div>
                         @endif
 
-                        <form enctype="multipart/form-data" action="{{route('candidates.update',['id'=>$candidate->id])}}" method="POST">
+                        <form enctype="multipart/form-data" action="{{route('candidates.update',$candidate->id)}}" method="POST">
                             @csrf
                             <input type="hidden" name="_method" value="PUT" class="form-control">
                             <div class="form-group">

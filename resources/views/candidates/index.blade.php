@@ -41,8 +41,8 @@
                                         @endif
                                     </td>
                                     <td>
-                                        <a class="btn btn-info text-white btn-sm" href="{{route('candidates.edit',['id'=>$candidate->id])}}">Edit</a>
-                                            <form onsubmit="return confirm('Delete this candidate permanently ?')" class="d-inline" action="{{route('candidates.destroy',['id'=>$candidate->id])}}" method="POST">
+                                        <a class="btn btn-info text-white btn-sm" href="{{route('candidates.edit',$candidate->id)}}">Edit</a>
+                                            <form onsubmit="return confirm('Delete this candidate permanently ?')" class="d-inline" action="{{route('candidates.destroy',$candidate->id)}}" method="POST">
                                                 @csrf
                                                 <input type="hidden" name="_method" value="DELETE">
                                                 <input type="submit" value="Delete" class="btn btn-danger btn-sm">

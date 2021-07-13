@@ -161,24 +161,22 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        Yajra\Datatables\DatatablesServiceProvider::class,
-        Unisharp\Ckeditor\ServiceProvider::class,
-        Intervention\Image\ImageServiceProvider::class,
-        Webcraft\Random\RandomServiceProvider::class,
 
         /*
          * Package Service Providers...
          */
+        Yajra\Datatables\DatatablesServiceProvider::class,
+        Unisharp\Ckeditor\ServiceProvider::class,
+        //Intervention\Image\ImageServiceProvider::class,
+        Webcraft\Random\RandomServiceProvider::class,
 
         /*
          * Application Service Providers...
          */
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
     ],
 
     /*

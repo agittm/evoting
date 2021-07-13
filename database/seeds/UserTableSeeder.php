@@ -12,12 +12,12 @@ class UserTableSeeder extends Seeder
     public function run()
     {
         $administrator = new App\User;
-        $administrator->name = 'RIFKI';
-        $administrator->email = 'rifki@admin.com';
+        $administrator->name = 'AGIT';
+        $administrator->email = 'agit@evoting.com';
         $administrator->password = \Hash::make('admin');
-        $administrator->nik = '6402052908960001';
-        $administrator->address = 'Desa Gas Alam Badak I, Muara Badak';
-        $administrator->phone ='085250708309';
+        $administrator->nik = '1234567891111111';
+        $administrator->address = 'Padalarang, Bandung Barat';
+        $administrator->phone ='085085085085';
         $administrator->roles =json_encode(['ADMIN']);
         $administrator->status = 'SUDAH';
 

@@ -10,7 +10,7 @@
                 </div>
                 @endif
         @if(Auth::user()->status == "BELUM")
-        <form enctype="multipart/form-data" action="{{route('users.pilih',['id'=>Auth::user()->id])}}" method="POST">
+        <form enctype="multipart/form-data" action="{{route('users.pilih',Auth::user()->id)}}" method="POST">
             @csrf
             <input type="hidden" name="_method" value="PUT" class="form-control">
             <div class="card-group">
