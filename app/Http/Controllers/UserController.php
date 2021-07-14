@@ -78,7 +78,7 @@ class UserController extends Controller
         $new_user->status = "BELUM";
 
         $new_user->save();
-        return redirect()->route('users.create')->with('status', 'User successfully Created');
+        return redirect()->route('users.create')->with('status', 'Berhasil menambah penguna');
     }
 
     /**
@@ -130,7 +130,7 @@ class UserController extends Controller
         $user->email = $request->get('email');
 
         $user->save();
-        return redirect()->route('users.index')->with('status', 'User successfully Updated');
+        return redirect()->route('users.index')->with('status', 'Berhasil mengubah pengguna');
     }
 
     /**
@@ -143,6 +143,6 @@ class UserController extends Controller
     {
         $user = \App\User::findOrFail($id);
         $user->delete();
-        return redirect()->route('users.index')->with('status', 'User successfully Deleted');
+        return redirect()->route('users.index')->with('status', 'Berhasil menghapus pengguna');
     }
 }

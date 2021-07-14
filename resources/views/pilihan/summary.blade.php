@@ -8,8 +8,11 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-md-6">
-                                <h3 class="card-title">Perolehan Suara</a>
-                                </h3>
+                                @if(Auth::user()->roles == '["ADMIN"]')
+                                    <h3 class="card-title">Perolehan Suara</a></h3>
+                                @elseif(Auth::user()->roles == '["VOTER"]')
+                                    <h3 class="card-title">Informasi Pasangan Calon</a></h3>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -18,10 +21,16 @@
                             <thead>
                                 <tr>
                                     <th>Nomor Urut</th>
-                                    <th>Foto Pasangan Calon</th>
+                                    <th>Foto Paslon</th>
                                     <th>Nama Pasangan</th>
-                                    <th>Jumlah Suara</th>
-                                    <th>Persentase</th>
+                                    @if(Auth::user()->roles == '["ADMIN"]')
+                                        <th>Jumlah Suara</th>
+                                        <th>Persentase</th>
+                                    @elseif(Auth::user()->roles == '["VOTER"]')
+                                        <th>Visi</th>
+                                        <th>Misi</th>
+                                        <th>Program Kerja</th>
+                                    @endif
                                 </tr>
                             </thead>
                             <tbody>
@@ -34,8 +43,14 @@
                                         @endif
                                     </td>
                                     <td>{{$candidate->nama_ketua.' dan '.$candidate->nama_wakil}}</td>
-                                    <td>{{$candidate->users->count()}} Suara</td>
-                                    <td>{{number_format(($candidate->users->count()/$jumlah)*100)}} %</td>
+                                    @if(Auth::user()->roles == '["ADMIN"]')
+                                        <td>{{$candidate->users->count()}} Suara</td>
+                                        <td>{{number_format(($candidate->users->count()/$jumlah)*100)}} %</td>
+                                    @elseif(Auth::user()->roles == '["VOTER"]')
+                                        <td>{!! $candidate->visi !!}</td>
+                                        <td>{!! $candidate->misi !!}</td>
+                                        <td>{!! $candidate->program_kerja !!}</td>
+                                    @endif
                                 </tr>
                                 @endforeach
                                 <tfoot>

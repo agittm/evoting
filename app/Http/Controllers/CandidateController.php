@@ -45,8 +45,8 @@ class CandidateController extends Controller
     public function store(Request $request)
     {
         \Validator::make($request->all(),[
-            "nama_ketua" => "required|min:5|max:100",
-            "nama_wakil" => "required|min:5|max:100",
+            "nama_ketua" => "required|min:4|max:100",
+            "nama_wakil" => "required|min:4|max:100",
             "visi" => "required|min:10|max:1000",
             "misi" => "required|min:10|max:1000",
             "program_kerja" => "required|min:10|max:1000",
@@ -102,8 +102,8 @@ class CandidateController extends Controller
     public function update(Request $request, $id)
     {
         \Validator::make($request->all(),[
-            "nama_ketua" => "required|min:5|max:100",
-            "nama_wakil" => "required|min:5|max:100",
+            "nama_ketua" => "required|min:4|max:100",
+            "nama_wakil" => "required|min:4|max:100",
             "visi" => "required|min:10|max:1000",
             "misi" => "required|min:10|max:1000",
             "program_kerja" => "required|min:10|max:1000",

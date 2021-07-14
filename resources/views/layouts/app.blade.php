@@ -22,6 +22,9 @@
             font-family: Arial;
             width: 100%;
         }
+        .center{
+            text-align: center;
+        }
     
     </style>
 
@@ -54,11 +57,6 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
-                            <li class="nav-item">
-                                @if (Route::has('register'))
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                @endif
-                            </li>
                         @else
                         @if(Auth::user()->roles == '["ADMIN"]')
                             <li class="nav-item">
@@ -69,7 +67,7 @@
                             </li>
                         @elseif(Auth::user()->roles == '["VOTER"]')
                             <li class="nav-item">
-                                <a href="{{route('candidates.pilihan')}}" class="nav-link">Pilihan</a>
+                                <a href="{{route('candidates.pilihan')}}" class="nav-link">Mulai Pilih</a>
                             </li>
                         @endif
                             <li class="nav-item dropdown">
@@ -100,6 +98,10 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+        <footer class="center">
+            &copy; 2021. Agit Tri Mulyanto @ STT BANDUNG
+        </footer>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>  

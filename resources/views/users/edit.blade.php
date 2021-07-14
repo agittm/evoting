@@ -25,7 +25,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="">NIK</label>
-                                <input type="text" name="nik" id="nik" value="{{$user->nik}}" class="form-control {{ $errors->first('nik') ? "is-invalid" : ""}}" placeholder="Masukkan NIK anda">
+                                <input type="text" name="nik" id="nik" value="{{$user->nik}}" class="form-control {{ $errors->first('nik') ? "is-invalid" : ""}}" placeholder="Masukkan NIK anda" maxlength="16" minlength="16">
                                 <p class="text-danger">{{ $errors->first('nik') }}</p>
                             </div>
                             <div class="form-group">
