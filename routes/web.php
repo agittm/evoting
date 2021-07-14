@@ -18,11 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('redirect/{driver}', 'Auth\LoginController@redirectToProvider')->name('login.provider');
+Route::get('/pilihan','ChoiceController@pilihan')->name('candidates.pilihan');
+
+Route::put('/users/{id}/pilih','ChoiceController@pilih')->name('users.pilih');
 
 Route::resource('users', 'UserController');
-
 Route::resource('candidates', 'CandidateController');
-
-Route::get('/pilihan','ChoiceController@pilihan')->name('candidates.pilihan');
-Route::put('/users/{id}/pilih','ChoiceController@pilih')->name('users.pilih');
