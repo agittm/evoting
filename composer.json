@@ -8,14 +8,13 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.2",
-        "laravel/framework": "^6.0",
+        "php": "^7.2.5",
+        "laravel/framework": "^7",
         "doctrine/dbal": "^2.9",
         "fideloper/proxy": "^4.0",
-        "laravel/tinker": "^1.0.10",
+        "laravel/tinker": "^2.0",
         "unisharp/laravel-filemanager":"^v2.2.0",
-        "unisharp/laravel-ckeditor": "dev-master",
-        "webcraft/laravel-random": "^2.0",
+        "ckeditor/ckeditor": "4.*",
         "yajra/laravel-datatables-oracle": "^9.11"
     },
     "require-dev": {
@@ -23,7 +22,8 @@
         "filp/whoops": "^2.0",
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^2.0",
-        "phpunit/phpunit": "^7.5"
+        "phpunit/phpunit": "^8.5",
+        "facade/ignition": "^2.0"
     },
     "config": {
         "optimize-autoloader": true,

@@ -166,9 +166,8 @@ return [
          * Package Service Providers...
          */
         Yajra\Datatables\DatatablesServiceProvider::class,
-        Unisharp\Ckeditor\ServiceProvider::class,
-        //Intervention\Image\ImageServiceProvider::class,
-        Webcraft\Random\RandomServiceProvider::class,
+        //Ckeditor\Ckeditor\ServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -229,7 +228,6 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Datatables' => Yajra\Datatables\Facades\Datatables::class,
         'Image' => Intervention\Image\Facades\Image::class,
-        'Random' => Webcraft\Random\RandomFacade::class,
 
     ],
 
