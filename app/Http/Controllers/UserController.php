@@ -5,12 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DataTables;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
     public function __construct(){
         $this-> middleware(function($request, $next){
-            if (Gate::allows('manage-users')) return $next($request);
+            if (Auth::check()) return $next($request);
 
             abort(403,'Anda Tidak memiliki Hak Akses');
         });
@@ -100,8 +101,13 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $user = \App\User::findOrFail($id);
-        return view('users.edit', ['user'=>$user]);
+        if (Auth::user()->id == $id || Gate::allows('manage-users')) {
+            $user = \App\User::findOrFail($id);
+            return view('users.edit', ['user'=>$user]);
+        }
+        else{
+            abort(403,'Anda Tidak memiliki Hak Akses');
+        }
     }
 
     /**
