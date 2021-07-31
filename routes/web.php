@@ -19,6 +19,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/pilihan','ChoiceController@pilihan')->name('candidates.pilihan');
+Route::get('/export/user','ExportController@exportuser')->name('export.user');
+Route::get('/export/candidate','ExportController@exportcandidate')->name('export.candidate');
+Route::get('/export/result','ExportController@exportresult')->name('export.result');
 
 Route::put('/users/{id}/pilih','ChoiceController@pilih')->name('users.pilih');
 

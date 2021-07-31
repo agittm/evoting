@@ -14,6 +14,11 @@
                                     <h3 class="card-title">Informasi Pasangan Calon</a></h3>
                                 @endif
                             </div>
+                            <div class="col-md-6 text-right">
+                                @if(Auth::user()->roles == '["ADMIN"]')
+                                    <a href="{{ route('export.result') }}" class="btn btn-outline-primary btn-sm">Export Hasil Voting</a>
+                                @endif
+                            </div>
                         </div>
                     </div>
                     <div class="card-body">

@@ -10,8 +10,9 @@
                             <div class="col-md-6">
                                 <h3 class="card-title">Manajemen Data Pemilih (Voter)</h3>
                             </div>
-                            <div class="col-md-6">
-                                <a href="{{ route('users.create') }}" class="btn btn-sm btn-outline-primary float-right">Tambah Data</a>
+                            <div class="col-md-6 text-right">
+                                <a href="{{ route('export.user') }}" class="btn btn-outline-primary btn-sm">Export Data</a>
+                                <a href="{{ route('users.create') }}" class="btn btn-sm btn-primary">Tambah Data</a>
                             </div>
                         </div>
                     </div>

@@ -10,8 +10,9 @@
                             <div class="col-md-6">
                                 <h3 class="card-title">Manajemen Data Kandidat</h3>
                             </div>
-                            <div class="col-md-6">
-                                <a href="{{ route('candidates.create') }}" class="btn btn-primary btn-sm float-right">Tambah Data</a>
+                            <div class="col-md-6 text-right">
+                                <a href="{{ route('export.candidate') }}" class="btn btn-outline-primary btn-sm">Export Data</a>
+                                <a href="{{ route('candidates.create') }}" class="btn btn-primary btn-sm">Tambah Data</a>
                             </div>
                         </div>
                     </div>
